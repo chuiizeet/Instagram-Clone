@@ -1,4 +1,4 @@
-# music_player_legal
+# Instagram UI Clone
 
 A new Flutter project.
 
