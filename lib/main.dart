@@ -5,7 +5,10 @@ import 'package:music_player_legal/insta_home.dart';
 
 void main() => runApp(new MyApp());
 
+
+
 class MyApp extends StatelessWidget {
+
 
 
   @override
