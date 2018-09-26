@@ -1,0 +1,126 @@
+Flutter crash report; please file at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run --machine -t lib/main.dart -d a0ca6532ca4d689934427688fc5b842e2054e111 --start-paused
+
+## exception
+
+FormatException: FormatException: Unexpected character (at character 1)
+Install Started
+^
+
+
+```
+#0      _ChunkedJsonParser.fail (dart:convert/runtime/libconvert_patch.dart:1358:5)
+#1      _ChunkedJsonParser.parseNumber (dart:convert/runtime/libconvert_patch.dart:1254:9)
+#2      _ChunkedJsonParser.parse (dart:convert/runtime/libconvert_patch.dart:922:22)
+#3      _parseJson (dart:convert/runtime/libconvert_patch.dart:29:10)
+#4      JsonDecoder.convert (dart:convert/json.dart:540:36)
+#5      JsonCodec.decode (dart:convert/json.dart:167:41)
+#6      SimControl._list (package:flutter_tools/src/ios/simulators.dart:88:17)
+#7      SimControl.getDevices (package:flutter_tools/src/ios/simulators.dart:95:49)
+#8      SimControl.getConnectedDevices (package:flutter_tools/src/ios/simulators.dart:109:12)
+#9      IOSSimulatorUtils.getAttachedDevices (package:flutter_tools/src/ios/simulators.dart:49:32)
+#10     IOSSimulators.pollingGetDevices (package:flutter_tools/src/ios/simulators.dart:38:80)
+<asynchronous suspension>
+#11     PollingDeviceDiscovery.devices (package:flutter_tools/src/device.dart:163:56)
+<asynchronous suspension>
+#12     DeviceManager.getAllConnectedDevices (package:flutter_tools/src/device.dart:91:46)
+<asynchronous suspension>
+#13     DeviceManager.getDevicesById (package:flutter_tools/src/device.dart:56:40)
+<asynchronous suspension>
+#14     DeviceManager.getDevices (package:flutter_tools/src/device.dart:80:11)
+#15     FlutterCommand.findAllTargetDevices (package:flutter_tools/src/runner/flutter_command.dart:391:48)
+<asynchronous suspension>
+#16     RunCommand.validateCommand (package:flutter_tools/src/commands/run.dart:237:21)
+<asynchronous suspension>
+#17     FlutterCommand.verifyThenRunCommand (package:flutter_tools/src/runner/flutter_command.dart:350:11)
+<asynchronous suspension>
+#18     FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:306:33)
+<asynchronous suspension>
+#19     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142:29)
+<asynchronous suspension>
+#20     _rootRun (dart:async/zone.dart:1124:13)
+#21     _CustomZone.run (dart:async/zone.dart:1021:19)
+#22     _runZoned (dart:async/zone.dart:1516:10)
+#23     runZoned (dart:async/zone.dart:1463:12)
+#24     AppContext.run (package:flutter_tools/src/base/context.dart:141:18)
+<asynchronous suspension>
+#25     FlutterCommand.run (package:flutter_tools/src/runner/flutter_command.dart:297:20)
+#26     CommandRunner.runCommand (package:args/command_runner.dart:194:27)
+<asynchronous suspension>
+#27     FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:347:21)
+<asynchronous suspension>
+#28     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142:29)
+<asynchronous suspension>
+#29     _rootRun (dart:async/zone.dart:1124:13)
+#30     _CustomZone.run (dart:async/zone.dart:1021:19)
+#31     _runZoned (dart:async/zone.dart:1516:10)
+#32     runZoned (dart:async/zone.dart:1463:12)
+#33     AppContext.run (package:flutter_tools/src/base/context.dart:141:18)
+<asynchronous suspension>
+#34     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:303:19)
+<asynchronous suspension>
+#35     CommandRunner.run.<anonymous closure> (package:args/command_runner.dart:109:29)
+#36     new Future.sync (dart:async/future.dart:224:31)
+#37     CommandRunner.run (package:args/command_runner.dart:109:11)
+#38     FlutterCommandRunner.run (package:flutter_tools/src/runner/flutter_command_runner.dart:211:18)
+#39     run.<anonymous closure> (package:flutter_tools/runner.dart:59:20)
+<asynchronous suspension>
+#40     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:142:29)
+<asynchronous suspension>
+#41     _rootRun (dart:async/zone.dart:1124:13)
+#42     _CustomZone.run (dart:async/zone.dart:1021:19)
+#43     _runZoned (dart:async/zone.dart:1516:10)
+#44     runZoned (dart:async/zone.dart:1463:12)
+#45     AppContext.run (package:flutter_tools/src/base/context.dart:141:18)
+<asynchronous suspension>
+#46     runInContext (package:flutter_tools/src/context_runner.dart:42:24)
+<asynchronous suspension>
+#47     run (package:flutter_tools/runner.dart:50:10)
+#48     main (package:flutter_tools/executable.dart:52:9)
+<asynchronous suspension>
+#49     main (file:///Users/imac/Documents/FlutterSDK/flutter/packages/flutter_tools/bin/flutter_tools.dart:8:3)
+#50     _startIsolate.<anonymous closure> (dart:isolate/runtime/libisolate_patch.dart:287:32)
+#51     _RawReceivePortImpl._handleMessage (dart:isolate/runtime/libisolate_patch.dart:171:12)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel beta, v0.8.2, on Mac OS X 10.13.6 17G65, locale es-MX)
+    • Flutter version 0.8.2 at /Users/imac/Documents/FlutterSDK/flutter
+    • Framework revision 5ab9e70727 (3 weeks ago), 2018-09-07 12:33:05 -0700
+    • Engine revision 58a1894a1c
+    • Dart version 2.1.0-dev.3.1.flutter-760a9690c2
+
+[✓] Android toolchain - develop for Android devices (Android SDK 28.0.2)
+    • Android SDK at /Users/imac/Library/Android/sdk
+    • Android NDK location not configured (optional; useful for native profiling support)
+    • Platform android-28, build-tools 28.0.2
+    • Java binary at: /Applications/Android Studio.app/Contents/jre/jdk/Contents/Home/bin/java
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+    • All Android licenses accepted.
+
+[✓] iOS toolchain - develop for iOS devices (Xcode 10.0)
+    • Xcode at /Applications/Xcode.app/Contents/Developer
+    • Xcode 10.0, Build version 10A255
+    • ios-deploy 1.9.2
+    • CocoaPods version 1.5.0
+
+[✓] Android Studio (version 3.1)
+    • Android Studio at /Applications/Android Studio.app/Contents
+    ✗ Flutter plugin not installed; this adds Flutter specific functionality.
+    ✗ Dart plugin not installed; this adds Dart specific functionality.
+    • Java version OpenJDK Runtime Environment (build 1.8.0_152-release-1024-b01)
+
+[✓] VS Code (version 1.27.2)
+    • VS Code at /Applications/Visual Studio Code.app/Contents
+    • Flutter extension version 2.18.0
+
+[✓] Connected devices (1 available)
+    • Flutter iph6 • a0ca6532ca4d689934427688fc5b842e2054e111 • ios • iOS 11.2.6
+
+• No issues found!
+```
