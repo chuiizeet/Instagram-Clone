@@ -37,7 +37,7 @@ final stories = Expanded(
             shape: BoxShape.circle,
             image: new DecorationImage(
               fit: BoxFit.fill,
-              image: new NetworkImage("https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-the-lord-of-the-rings-ian-mckellen.jpg")
+              image: new NetworkImage("https://www.biografiasyvidas.com/biografia/j/fotos/jobs_steve_2.jpg")
             ),
           ),
           margin: const EdgeInsets.symmetric(horizontal: 12.0),
